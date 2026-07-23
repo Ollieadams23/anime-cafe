@@ -3,11 +3,11 @@
 Use this file as a complete record of your project from planning to final delivery.
 
 ## 1. Project Snapshot
-- Project name:
+- Project name:Anime Cafe
 - Owner:
-- Start date:
-- Target deadline:
-- Current status: Not started
+- Start date:23/7/2026
+- Target deadline:31/8/2026
+- Current status: started
 
 ## 2. Goal and Scope
 ### Main goal
@@ -33,13 +33,24 @@ Write the one-sentence goal of this project.
 - [ ] NFR-03: Accessibility
 
 ## 4. Tools and Environment
-- OS:
-- IDE:
-- Language(s):
-- Framework(s):
-- Database:
-- Version control:
-- Hosting/Deployment target:
+- OS: Windows
+- IDE: Visual Studio Code
+- Language(s): HTML5, CSS3, JavaScript (ES6)
+- Framework(s): None (vanilla stack)
+- Database: None (static front-end project)
+- Version control: Git + GitHub
+- Hosting/Deployment target: GitHub Pages
+
+### Tech Stack Decision Notes
+- Reason for no framework: The rubric emphasizes custom HTML/CSS/JS and validation quality.
+- Linting/validation tools selected:
+  - HTML: W3C validator
+  - CSS: W3C Jigsaw validator
+  - JavaScript: JSHint and javascriptvalidator.net
+- UX/accessibility constraints:
+  - Maximum 3 brand colors
+  - Strong contrast between text and background
+  - Clear heading hierarchy and intuitive navigation
 
 ## 5. Step-by-Step Plan
 ### Phase 1: Planning
@@ -114,7 +125,63 @@ Copy this block for each work session.
 |---|---|---|---|
 |  | Initial documentation file created | Project tracking |  |
 
-## 10. Final Summary
+## 10. Validation and Testing Evidence
+
+### Validation Tools
+- HTML: https://validator.w3.org/#validate_by_input
+- CSS: http://jigsaw.w3.org/css-validator/
+- JavaScript: https://javascriptvalidator.net/
+
+### Validation Checklist
+- [ ] HTML validated
+- [ ] CSS validated
+- [ ] JavaScript validated/linted
+- [ ] Errors fixed and re-tested
+- [ ] Warnings reviewed and addressed where relevant
+
+### Error/Warning Fix Log
+Document every issue and how you fixed it.
+
+| Date | Tool | Page/File | Issue Type | Message Summary | Fix Applied | Result |
+|---|---|---|---|---|---|---|
+| YYYY-MM-DD | HTML Validator | index.html | Error/Warning |  |  | Pass/Fail |
+| YYYY-MM-DD | CSS Validator | assets/css/style.css | Error/Warning |  |  | Pass/Fail |
+| YYYY-MM-DD | JavaScript Validator | assets/js/main.js | Error/Warning |  |  | Pass/Fail |
+
+### Validation Notes
+- Before fix:
+- After fix:
+- Retest status:
+
+## 11. Version Control and Deployment Evidence
+
+### Commit and Push Routine
+- [ ] Added files with `git add .`
+- [ ] Committed with descriptive message
+- [ ] Pushed to GitHub with `git push`
+
+### Commit History Log
+Use this to prove regular commits during development.
+
+| Date | Commit Message | Files/Features Changed | Pushed (Y/N) |
+|---|---|---|---|
+| YYYY-MM-DD | feat(home): add hero and USP section | index.html, assets/css/style.css | Y |
+
+### Deployment Record (GitHub Pages)
+- Repository URL:
+- Pages URL:
+- Branch used for Pages (main/master):
+- Folder used for Pages (root/docs):
+- Deployment date:
+- Deployment verified on mobile and desktop: Yes/No
+
+### Deployment Verification Notes
+- Navigation check:
+- Visual consistency check:
+- Broken links check:
+- Final parity with local version:
+
+## 12. Final Summary
 ### What was delivered
 - 
 
