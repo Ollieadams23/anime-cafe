@@ -113,8 +113,8 @@ Acceptance criteria:
 ## 5. Work Breakdown Structure
 
 ### Phase 0 - Technical Decisions
-- [ ] Decide framework approach (recommended: no framework, custom HTML/CSS/JS to match rubric)
-- [ ] Decide CSS strategy (single stylesheet or modular files)
+- [x] Decide framework approach (recommended: no framework, custom HTML/CSS/JS to match rubric)
+- [x] Decide CSS strategy (single stylesheet or modular files)
 - [ ] Decide JavaScript structure (single main.js or feature-based files)
 - [ ] Decide linting/validation tools and workflow
 - [ ] Record decisions in README under "Tech Stack and Tooling"

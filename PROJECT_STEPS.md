@@ -11,10 +11,15 @@ Use this file as a complete record of your project from planning to final delive
 
 ## 2. Goal and Scope
 ### Main goal
-Write the one-sentence goal of this project.
+to create a functional, responsive website for a fictional local cafe to promote menu offerings (coffee, drinks, snacks) and provide clear business information.
 
 ### Scope (what is included)
-- 
+-   Home page
+-   About page
+-   Contact page
+-   Category page
+-   Products page
+-   Responsive layout across major screen sizes
 - 
 
 ### Out of scope (what is not included)
