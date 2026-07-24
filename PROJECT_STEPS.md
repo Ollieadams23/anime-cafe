@@ -45,6 +45,7 @@ to create a functional, responsive website for a fictional local cafe to promote
 - Database: None (static front-end project)
 - Version control: Git + GitHub
 - Hosting/Deployment target: GitHub Pages
+- JavaScript file structure: Single file at scripts/index.js
 
 ### Tech Stack Decision Notes
 - Reason for no framework: The rubric emphasizes custom HTML/CSS/JS and validation quality.
@@ -52,6 +53,7 @@ to create a functional, responsive website for a fictional local cafe to promote
   - HTML: W3C validator
   - CSS: W3C Jigsaw validator
   - JavaScript: JSHint and javascriptvalidator.net
+  - Workflow: run validators after each major page edit and log fixes
 - UX/accessibility constraints:
   - Maximum 3 brand colors
   - Strong contrast between text and background

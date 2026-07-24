@@ -61,8 +61,8 @@ Include:
 - Background must not reduce text readability.
 
 ## Global checklist
-- [ ] Same header nav on all pages
-- [ ] Same footer style on all pages
+- [x] Same header nav on all pages
+- [x] Same footer style on all pages
 - [ ] Current page link visually highlighted
 - [ ] Mobile nav works
 - [ ] No broken links

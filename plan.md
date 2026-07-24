@@ -22,6 +22,7 @@ Create a professional multi-page cafe website that helps promote services and pr
 - Front-end architecture: Multi-page static site
 - Core technologies: HTML5, CSS3, Vanilla JavaScript (ES6)
 - Frameworks: None
+- JavaScript structure: Single file (`scripts/index.js`)
 - Hosting: GitHub Pages
 - Version control: Git + GitHub
 
@@ -34,7 +35,7 @@ Create a professional multi-page cafe website that helps promote services and pr
 ### Quality and Validation Tooling
 - HTML validation: W3C Validator (validator.w3.org)
 - CSS validation: W3C Jigsaw (jigsaw.w3.org)
-- JavaScript lint/validation: JSHint and/or javascriptvalidator.net
+- JavaScript lint/validation: JSHint and javascriptvalidator.net
 - Manual QA: device-width checks and interaction checks in browser dev tools
 
 ### Planned Interaction Features (Significant Functionality)
@@ -115,9 +116,9 @@ Acceptance criteria:
 ### Phase 0 - Technical Decisions
 - [x] Decide framework approach (recommended: no framework, custom HTML/CSS/JS to match rubric)
 - [x] Decide CSS strategy (single stylesheet or modular files)
-- [ ] Decide JavaScript structure (single main.js or feature-based files)
-- [ ] Decide linting/validation tools and workflow
-- [ ] Record decisions in README under "Tech Stack and Tooling"
+- [x] Decide JavaScript structure (single file: scripts/index.js)
+- [x] Decide linting/validation tools and workflow
+- [x] Record decisions in README under "Tech Stack and Tooling"
 
 ### Phase 1 - Planning and Content
 - [ ] Confirm brand name, tone, and visual direction
