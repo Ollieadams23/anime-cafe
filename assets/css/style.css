@@ -82,3 +82,152 @@ main p {
     transform: translateY(-2px);
     border: 4px solid #f10404;
 }
+
+#cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.card{
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 2px solid rgba(6, 209, 87, 0.35);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-popup {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 10px);
+    transform: translateX(-50%) translateY(6px);
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #06d157;
+    font-size: 14px;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.card-link:hover .card-popup,
+.card-link:focus-visible .card-popup {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.card-link:hover .card,
+.card-link:focus-visible .card {
+    transform: translateY(-4px) scale(1.02);
+    border-color: #06d157;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+.card-link:focus-visible {
+    outline: 3px solid #06d157;
+    outline-offset: 4px;
+}
+
+.card-link:active .card {
+    transform: translateY(-1px) scale(1.01);
+}
+
+.usp-section {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.usp-section h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.usp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.usp-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    padding: 16px;
+    color: #06d157;
+    text-align: left;
+}
+
+.usp-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.usp-card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .usp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .usp-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid rgba(6, 209, 87, 0.35);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #06d157;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 3px solid #06d157;
+    outline-offset: 4px;
+}
+
+textarea {
+    resize: horizontal;
+    min-height: 120px;
+}

@@ -63,6 +63,6 @@ Include:
 ## Global checklist
 - [x] Same header nav on all pages
 - [x] Same footer style on all pages
-- [ ] Current page link visually highlighted
-- [ ] Mobile nav works
-- [ ] No broken links
+- [x] Current page link visually highlighted
+- [x] Mobile nav works
+- [x] No broken links
