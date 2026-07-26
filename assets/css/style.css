@@ -53,13 +53,25 @@ nav a:focus-visible {
     }
 }
 
-main {
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+secondcolumn {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     padding: 0 24px;
     max-width: 800px;
+}
+
+.staff {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
 }
 
 main p {
@@ -92,10 +104,10 @@ main p {
 }
 
 .card-link {
-    position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     text-decoration: none;
-    border-radius: 14px;
     cursor: pointer;
 }
 
@@ -111,17 +123,12 @@ main p {
 }
 
 .card-popup {
-    position: absolute;
-    left: 50%;
-    bottom: calc(100% + 10px);
-    transform: translateX(-50%) translateY(6px);
     padding: 8px 12px;
     border-radius: 8px;
     background-color: rgba(0, 0, 0, 0.9);
     color: #06d157;
-    font-size: 14px;
-    white-space: nowrap;
-    opacity: 0;
+    font-size: 20px;
+    opacity: 1;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -129,12 +136,12 @@ main p {
 .card-link:hover .card-popup,
 .card-link:focus-visible .card-popup {
     opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(0%) translateY(-50%);
 }
 
 .card-link:hover .card,
 .card-link:focus-visible .card {
-    transform: translateY(-4px) scale(1.02);
+    transform: translateY(-30px) scale(1.02);
     border-color: #06d157;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
 }
@@ -230,4 +237,38 @@ textarea:focus {
 textarea {
     resize: horizontal;
     min-height: 120px;
+}
+
+.special {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.special img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .special {
+        flex-direction: column;
+    }
+
+    .special img {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+h4 {
+    margin-top: 30px;
+    margin-bottom: 4px;
 }
