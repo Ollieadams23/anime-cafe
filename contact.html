@@ -17,7 +17,10 @@
         <p>Email: cafe@animecafe.com</p>
         <p>Address: 123 Anime Street, Tokyo, Japan</p>
         <p>Opening Hours: Mon-Fri 8am - 8pm, Sat-Sun 9am - 10pm</p>
-        <form onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you soon.');">
+        <div id="success-message" class="success-message" style="display:none;">
+            <p>✓ Thank you for your message! We will get back to you soon.</p>
+        </div>
+        <form id="contact-form" onsubmit="handleContactSubmit(event)">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <label for="email">Email:</label>
@@ -27,5 +30,23 @@
             <button type="submit" style="height:50px">Submit</button>
         </form>
     </main>
+    <script>
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const successMessage = document.getElementById('success-message');
+            
+            // Show success message
+            successMessage.style.display = 'block';
+            
+            // Clear form
+            form.reset();
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+    </script>
 </body>
 </html>
