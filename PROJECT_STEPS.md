@@ -78,6 +78,8 @@ to create a functional, responsive website for a fictional local cafe to promote
 - [ ] Build UI/UX elements
 - [ ] Integrate APIs/services
 - [ ] Handle errors and edge cases
+- [ ] Build cart functionality (add/remove items, quantity)
+- [ ] Build checkout page and order summary
 
 ### Phase 4: Testing
 - [ ] Write unit tests

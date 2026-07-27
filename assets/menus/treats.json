@@ -1,0 +1,39 @@
+{
+    "treats": [
+        {
+            "id": 11,
+            "name": "Anime-Themed Croissant",
+            "image": "assets/images/treats/anime_croissant.jpeg",
+            "description": "Buttery, flaky croissant with anime character art. A fan favorite!",
+            "price": "$4.49"
+        },
+        {
+            "id": 12,
+            "name": "Chocolate Chip Cookie",
+            "image": "assets/images/treats/chocolate_cookie.jpeg",
+            "description": "Warm, freshly baked cookie loaded with chocolate chips.",
+            "price": "$2.99"
+        },
+        {
+            "id": 13,
+            "name": "Blueberry Muffin",
+            "image": "assets/images/treats/blueberry_muffin.jpeg",
+            "description": "Moist blueberry muffin with a cinnamon crumb topping.",
+            "price": "$3.49"
+        },
+        {
+            "id": 14,
+            "name": "Strawberry Shortcake",
+            "image": "assets/images/treats/strawberry_shortcake.jpeg",
+            "description": "Light sponge cake layered with cream and fresh strawberries.",
+            "price": "$5.99"
+        },
+        {
+            "id": 15,
+            "name": "Matcha Donut",
+            "image": "assets/images/treats/matcha_donut.jpeg",
+            "description": "Glazed donut with green tea matcha flavor. Unique and delicious.",
+            "price": "$3.99"
+        }
+    ]
+}

@@ -53,8 +53,8 @@ Explain the cafe story, mission, and values so users trust the brand.
 +------------------------------------------------------+
 
 ## Build checklist
-- [ ] One clear H1
-- [ ] Story and mission included
-- [ ] Values section complete
-- [ ] Team/founder content added
-- [ ] Internal links tested
+- [x] One clear H1
+- [x] Story and mission included
+- [x] Values section complete
+- [x] Team/founder content added
+- [x] Internal links tested

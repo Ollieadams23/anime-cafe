@@ -1,0 +1,39 @@
+{
+    "drinks": [
+        {
+            "id": 6,
+            "name": "Iced Matcha Latte",
+            "image": "assets/images/drinks/matcha_latte.jpeg",
+            "description": "Smooth matcha green tea blended with milk and ice. Creamy and refreshing.",
+            "price": "$5.99"
+        },
+        {
+            "id": 7,
+            "name": "Anime Berry Smoothie",
+            "image": "assets/images/drinks/berry_smoothie.jpeg",
+            "description": "Mixed berry smoothie with a hint of anime magic. Colorful and delicious.",
+            "price": "$6.49"
+        },
+        {
+            "id": 8,
+            "name": "Cold Brew Coffee",
+            "image": "assets/images/drinks/cold_brew.jpeg",
+            "description": "Smooth, rich cold brew coffee served over ice. Perfect for hot days.",
+            "price": "$4.99"
+        },
+        {
+            "id": 9,
+            "name": "Bubble Tea",
+            "image": "assets/images/drinks/bubble_tea.jpeg",
+            "description": "Classic bubble tea with chewy tapioca pearls. Sweet and refreshing.",
+            "price": "$5.49"
+        },
+        {
+            "id": 10,
+            "name": "Caramel Macchiato",
+            "image": "assets/images/drinks/caramel_macchiato.jpeg",
+            "description": "Espresso topped with velvety steamed milk and rich caramel sauce.",
+            "price": "$5.99"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "breakfasts": [
+        {
+            "id": 1,
+            "name":"pancakes",
+            "image":"assets/images/breakfasts/pancakestack.jpeg",
+            "description":"Fluffy pancakes served with syrup and butter.",
+            "price":"$5.99"
+        },
+        {
+            "id": 2,
+            "name":"omelet",
+            "image":"assets/images/breakfasts/omelet.jpeg",
+            "description":"Three-egg omelet with your choice of fillings.",
+            "price":"$6.99"
+        },
+        {
+            "id": 3,
+            "name":"french toast",
+            "image":"assets/images/breakfasts/french_toast.jpeg",
+            "description":"Golden-brown French toast served with powdered sugar and syrup.",
+            "price":"$5.49"
+        },
+        {
+            "id": 4,
+            "name":"Thai mooping",
+            "image":"assets/images/breakfasts/mooping.jpeg",
+            "description":"Traditional Thai mooping served with sticky rice.",
+            "price":"$7.99"
+        },
+        {
+            "id": 5,
+            "name": "Mango Sticky Rice",
+            "image": "assets/images/breakfasts/mango_sticky_rice.jpeg",
+            "description": "Sweet sticky rice served with ripe mango and coconut milk.",
+            "price": "$6.49"
+        }
+
+    ]
+}
+
+
+
+
