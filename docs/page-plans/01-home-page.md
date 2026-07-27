@@ -58,7 +58,7 @@ Introduce the cafe, highlight unique selling points, and drive users to menu and
 
 ## Build checklist
 - [x] One clear H1
-- [ ] Hero CTA links work
+- [x] Hero CTA links work
 - [x] 3 selling points visible
-- [ ] Featured products shown
-- [ ] Responsive layout on mobile and desktop
+- [x] Featured products shown
+- [x] Responsive layout on mobile and desktop
