@@ -5,6 +5,30 @@ function addToCart(itemId) {
     console.log(itemId);
 }
 
+function toggleImageEnlarge(event) {
+    const img = event.target;
+    
+    // Create modal overlay
+    const modal = document.createElement('div');
+    modal.className = 'enlarged-image';
+    
+    // Create enlarged image inside modal
+    const enlargedImg = document.createElement('img');
+    enlargedImg.src = img.src;
+    enlargedImg.alt = img.alt;
+    enlargedImg.style.maxWidth = '90vw';
+    enlargedImg.style.maxHeight = '90vh';
+    enlargedImg.style.objectFit = 'contain';
+    
+    modal.appendChild(enlargedImg);
+    document.body.appendChild(modal);
+    
+    // Close modal when clicked
+    modal.addEventListener('click', () => {
+        modal.remove();
+    });
+}
+
 function loadMenu(menuToLoad) {
     const productMount = document.getElementById(`${menuToLoad}`);
 
@@ -31,15 +55,20 @@ function loadMenu(menuToLoad) {
                 const ItemPrice = Item.price;//get item price
                 const ItemId = Item.id;//get item id
 
-                productMount.innerHTML += `
-                    <article class="${menuToLoad}-item">
-                        <h3>${ItemName}</h3>
-                        <img src="${ItemImage}" alt="${ItemName}">
-                        <p>${ItemDescription}</p>
-                        <p>${ItemPrice}</p>
-                        <button class="add-to-cart" onclick="addToCart(${ItemId})">Add to Cart</button>
-                    </article>
+                const articleElement = document.createElement('article');
+                articleElement.className = `${menuToLoad}-item`;
+                articleElement.innerHTML = `
+                    <h3>${ItemName}</h3>
+                    <img src="${ItemImage}" alt="${ItemName}">
+                    <p>${ItemDescription}</p>
+                    <p>${ItemPrice}</p>
+                    <button class="add-to-cart" onclick="addToCart(${ItemId})">Add to Cart</button>
                 `;
+                productMount.appendChild(articleElement);
+
+                // Add event listener to the image
+                const imageElement = articleElement.querySelector('img');
+                imageElement.addEventListener('click', toggleImageEnlarge);
             }
         })
         .catch(error => {

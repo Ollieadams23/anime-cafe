@@ -23,9 +23,9 @@
         },
         {
             "id": 4,
-            "name":"Thai mooping",
-            "image":"assets/images/breakfasts/mooping.jpeg",
-            "description":"Traditional Thai mooping served with sticky rice.",
+            "name":"Thai congee",
+            "image":"assets/images/breakfasts/congee.jpeg",
+            "description":"Traditional Thai congee served with sticky rice.",
             "price":"$7.99"
         },
         {

@@ -679,4 +679,43 @@ h4 {
 .products img{
     max-width: 50%;
     height: auto;
+    cursor: pointer;
+}
+
+
+/* Enlarged Image Styles */
+.enlarged-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* viewport width */
+    height: 100vh; /* viewport height */
+    background-color: rgba(0, 0, 0, 0.9); /* semi-transparent dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+    cursor: zoom-out; /* Indicate it can be clicked to shrink */
+    object-fit: contain; /* Ensure the whole image is visible */
+    padding: 20px; /* Some padding around the image */
+}
+
+.enlarged-image:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+
+.products h2 {
+    text-align: left;
+    font-size: 2cm;
+}
+
+.products_title {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.products_cart {
+    text-align: right;
+    font-size: 3rem;
 }
