@@ -87,6 +87,47 @@ to create a functional, responsive website for a fictional local cafe to promote
 - [ ] Manual QA checklist
 - [ ] Fix identified issues
 
+#### Issues Found & Fixed
+
+**Issue 1: Product images not enlarging on click**
+- **Cause:** `toggleImageEnlarge()` function was called but not defined
+- **Solution:** Implemented the function to create a modal overlay, display the enlarged image, and close on click
+- **Date Fixed:** 2026-07-28
+
+**Issue 2: Cart counter not working for quantities**
+- **Cause:** Using `arr.push(item)` created a single-item array and counted only that array instead of the full cart array
+- **Root:** Logic was `let arr = []; arr.push(item); arr.reduce(...)` which always returned 1. Also `let arr` was inside the for loops, resetting to empty array on each iteration
+- **Solution:** Moved `let arr` outside the for loops so it accumulates across iterations, then used `reduce()` on the full array to properly count occurrences
+- **Date Fixed:** 2026-07-29
+
+**Issue 3: Checkout only fetching breakfasts.json**
+- **Cause:** Only fetched one menu file, so drinks (IDs 6-10) and treats (IDs 11-15) items not found
+- **Solution:** Fetched all three menus (breakfasts, drinks, treats), combined them into single `data` array using spread operator, then searched across all items with a single loop
+- **Implementation:** Created array: `const data = [...breakfastsData.breakfasts, ...drinksData.drinks, ...treatsData.treats]`
+- **Date Fixed:** 2026-07-29
+
+**Issue 4: Duplicate rows in checkout table**
+- **Cause:** If same item added twice, loops through cart twice and creates two separate table rows instead of one row with quantity: 2
+- **Solution:** Moved array initialization outside the for loops so it accumulates items across iterations, allowing proper quantity aggregation
+- **Date Fixed:** 2026-07-29
+
+**Issue 5: Total calculation running before table rows added (timing issue)**
+- **Cause:** Total calculation code ran immediately after fetch call, but fetch is asynchronous—table rows hadn't been added to DOM yet, so `tBody.rows.length` was 0
+- **Root:** Fetch returns a Promise, but total logic wasn't waiting for it to complete
+- **Solution:** Made `loadCheckout()` function `async` and added `await` before the fetch call, ensuring rows are added to DOM before total is calculated
+- **Date Fixed:** 2026-07-29
+
+**Issue 6: Total calculation not multiplying quantity by price**
+- **Cause:** Code only added unit price to total, ignoring quantity
+- **Root:** Used `total += price` instead of `total += quantity * price`
+- **Solution:** Added `const quantity = parseInt(row.cells[1].innerText)` and multiplied: `total += quantity * price`
+- **Date Fixed:** 2026-07-29
+
+**Issue 7: Price parsing failed due to dollar sign**
+- **Cause:** Price string is "$5.99", but `parseFloat("$5.99")` returns `NaN` (can't parse the `$`)
+- **Solution:** Used `.replace('$', '')` to strip the dollar sign before parsing: `parseFloat(row.cells[2].innerText.replace('$', ''))`
+- **Date Fixed:** 2026-07-29
+
 ### Phase 5: Deployment
 - [ ] Prepare production configuration
 - [ ] Deploy to target environment
