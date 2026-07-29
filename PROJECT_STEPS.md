@@ -61,16 +61,16 @@ to create a functional, responsive website for a fictional local cafe to promote
 
 ## 5. Step-by-Step Plan
 ### Phase 1: Planning
-- [ ] Define project objective
-- [ ] Gather requirements
-- [ ] Create initial architecture sketch
-- [ ] Define milestones and deadlines
+- [x] Define project objective
+- [x] Gather requirements
+- [x] Create initial architecture sketch
+- [x] Define milestones and deadlines
 
 ### Phase 2: Setup
-- [ ] Initialize project structure
-- [ ] Install dependencies
+- [x] Initialize project structure
+- [x] Install dependencies
 - [ ] Configure environment variables
-- [ ] Create base README and docs
+- [x] Create base README and docs
 
 ### Phase 3: Development
 - [ ] Build core feature A

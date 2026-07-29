@@ -8,6 +8,7 @@ Follow these files in order while coding:
 4. 03-category-page.md
 5. 04-products-page.md
 6. 05-contact-page.md
+7. 06-checkout-page.md
 
 Suggested workflow:
 - Build shared layout first (header, footer, nav, base styles)

@@ -1,9 +1,28 @@
 
 
 function addToCart(itemId) {
-    localStorage.setItem('cartItem', itemId);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(itemId);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    showCartAmount();
     console.log(itemId);
 }
+
+function getCartItems() {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    return cart;
+}
+
+
+function showCartAmount() {
+    const productsCart = document.querySelector('.products_cart');
+    const cartamount = getCartItems().length;
+    productsCart.innerHTML = `
+    <button class='productCartButton' onclick="window.location.href = window.location.origin + '/checkout.html';">Cart (${cartamount})</button>
+
+    `;
+}
+
 
 function toggleImageEnlarge(event) {
     const img = event.target;
@@ -83,4 +102,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadMenu('breakfasts');
     loadMenu('drinks');
     loadMenu('treats');
+    showCartAmount();
 });
