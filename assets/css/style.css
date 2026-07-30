@@ -742,6 +742,7 @@ h4 {
 
 table{
     width: 100%;
+    font-size: clamp(1.5rem, 4vw, 3rem);
 }
 
 td {
