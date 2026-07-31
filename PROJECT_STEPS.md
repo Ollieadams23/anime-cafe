@@ -128,6 +128,28 @@ to create a functional, responsive website for a fictional local cafe to promote
 - **Solution:** Used `.replace('$', '')` to strip the dollar sign before parsing: `parseFloat(row.cells[2].innerText.replace('$', ''))`
 - **Date Fixed:** 2026-07-29
 
+**Issue 8: Quantity counter parsing broken with buttons**
+- **Cause:** Added +/- buttons to quantity cell, so `innerText` returned "-  5  +" instead of just "5", causing `parseInt()` to fail
+- **Solution:** Stored quantity in `data-quantity` attribute on each row: `row.setAttribute('data-quantity', quantity)`, then read with `row.dataset.quantity`
+- **Date Fixed:** 2026-07-30
+
+**Issue 9: removeFromCart() removing all instances instead of one**
+- **Cause:** Used `.filter(item => item !== itemId)` which removes ALL occurrences of that ID
+- **Example:** Cart `[1, 3, 1, 5]` minus pancakes → `[3, 5]` instead of `[3, 1, 5]`
+- **Solution:** Changed to use `.indexOf()` and `.splice()` to remove only the first occurrence
+- **Date Fixed:** 2026-07-30
+
+**Issue 10: Total not updating when adjusting quantities**
+- **Cause:** Clicking +/- buttons updated localStorage but didn't refresh the table display or recalculate total
+- **Solution:** Called `loadCheckout()` at end of `addToCart()` and `removeFromCart()` to reload entire checkout with updated data
+- **Date Fixed:** 2026-07-30
+
+**Issue 11: Total amount cell reference broke after adding colspan to Total heading**
+- **Cause:** Changed "Total" heading cell to use `colspan="2"`, reducing the totals row from 3 cells to 2 cells. Code still referenced `totalsRow.cells[2]` which no longer existed
+- **Root:** `colspan="2"` merges two cells into one, so `cells[2]` (3rd cell) becomes `cells[1]` (2nd cell)
+- **Solution:** Changed `totalsRow.cells[2].innerText` to `totalsRow.cells[1].innerText`
+- **Date Fixed:** 2026-07-31
+
 ### Phase 5: Deployment
 - [ ] Prepare production configuration
 - [ ] Deploy to target environment

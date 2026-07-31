@@ -11,8 +11,8 @@ function loadSharedHeader() {
 	// Inject shared header HTML into the placeholder.
 	headerMount.innerHTML = `
 		<header>
-			<img class="header-image" src="assets/images/header.jpeg" alt="Cafe interior with warm lighting">
-			<nav>
+			<img aria-label="Cafe interior with warm lighting" class="header-image" src="assets/images/header.jpeg" alt="Cafe interior with warm lighting">
+			<nav aria-label="Main navigation">
 				<a href="index.html">Home</a>
 				<a href="about.html">About</a>
 				<a href="category.html">Category</a>
