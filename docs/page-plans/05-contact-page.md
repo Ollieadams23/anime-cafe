@@ -52,8 +52,11 @@ Fields:
 +------------------------------------------------------+
 
 ## Build checklist
-- [ ] One clear H1
-- [ ] Contact details complete
-- [ ] Form validates and gives feedback
-- [ ] Email format check works
-- [ ] Map/location section included
+- [x] One clear H1
+- [x] Contact details complete
+- [x] Form validates and gives feedback
+- [x] Email format check works
+- [x] Map/location section included
+- [x] passes wc3 validation
+- [x] passes wc3 accessibility
+- [x] passes wc3 jigsaw css

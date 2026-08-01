@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 // Define a function that inserts the same header on every page.
 function loadSharedHeader() {
 	// Find the placeholder element where the shared header should be inserted.
@@ -62,7 +64,7 @@ function loadSharedFooter() {
 	`;
 
 	// Get the current file name from the URL path (for example: about.html).
-	const currentPage = window.location.pathname.split("/").pop() || "index.html";
+	//const currentPage = window.location.pathname.split("/").pop() || "index.html";
 }
 
 // Run the header loader after the HTML page has finished loading.

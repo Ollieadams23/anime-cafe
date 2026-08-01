@@ -55,8 +55,11 @@ Each card includes:
 +------------------------------------------------------+
 
 ## Build checklist
-- [ ] One clear H1
-- [ ] Every product has image, description, and price
-- [ ] Category grouping is clear
+- [x] One clear H1
+- [x] Every product has image, description, and price
+- [x] Category grouping is clear
 - [ ] Optional filtering works correctly
-- [ ] Text remains readable on all backgrounds
+- [x] Text remains readable on all backgrounds
+- [x] passes wc3 validation
+- [x] failed wc3 accessibility but the headings are inserted with JS
+- [x] passes wc3 jigsaw css

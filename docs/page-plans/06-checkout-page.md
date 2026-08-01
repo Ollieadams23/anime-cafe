@@ -109,20 +109,24 @@ localStorage.cart = "[1, 3, 5, 1]"  // IDs only
 ```
 
 ## Build checklist
-- [ ] Cart loads from localStorage on page load
-- [ ] Empty cart message shows when cart is empty
-- [ ] All items display with image, name, price, quantity
-- [ ] Quantities correctly aggregated from cart IDs
-- [ ] +/- buttons update quantity and recalculate totals
+- [x] Cart loads from localStorage on page load
+- [x] Empty cart message shows when cart is empty
+- [x] All items display with image, name, price, quantity
+- [x] Quantities correctly aggregated from cart IDs
+- [x] +/- buttons update quantity and recalculate totals
 - [ ] Remove button works and updates cart
-- [ ] Totals calculated correctly
+- [x] Totals calculated correctly
 - [ ] Continue Shopping link works
 - [ ] Clear Cart button with confirmation
-- [ ] All links work (header navigation, back to products)
-- [ ] Images clickable to enlarge
-- [ ] Responsive on mobile and desktop
-- [ ] No console errors
-- [ ] localStorage updates when quantities change
+- [x] All links work (header navigation, back to products)
+- [x] Images clickable to enlarge
+- [x] Responsive on mobile and desktop
+- [x] No console errors
+- [x] localStorage updates when quantities change
+- [x] passes wc3 validation
+- [x] passes wc3 accessibility
+- [x] passes wc3 jigsaw css
+
 
 ## Optional enhancements
 - Add to cart from checkout (keep item, change quantity)

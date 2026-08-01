@@ -49,8 +49,11 @@ Each card should include:
 +------------------------------------------------------+
 
 ## Build checklist
-- [ ] One clear H1
-- [ ] 3 required categories present
-- [ ] Each category has description
-- [ ] Links to products work
-- [ ] Mobile card layout remains readable
+- [x] One clear H1
+- [x] 3 required categories present
+- [x] Each category has description
+- [x] Links to products work
+- [x] Mobile card layout remains readable
+- [x] passes wc3 validation
+- [x] passes wc3 accessibility
+- [x] passes wc3 jigsaw css

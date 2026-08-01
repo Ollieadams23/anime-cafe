@@ -6,11 +6,13 @@
 	<title>ANIME-CAFE | Contact</title>
 	<link rel="icon" href="assets/images/favicon.jpeg" type="image/x-icon">
 	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/contact.css">
 	<script src="scripts/index.js" defer></script>
 </head>
 <body>
 	<div id="site-header"></div>
 	<main class="contact-main">
+        <section class="contactdetails">
 		<h1>Contact</h1>
 		<p>Find our contact details and get in touch.</p>
         <p>Phone: +81 123-456-7890</p>
@@ -27,8 +29,22 @@
             <input type="email" id="email" name="email" placeholder="Your Email" required>
             <label for="message">Message:</label>
             <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-            <button class="contactSubmit"type="submit">Submit</button>
+            <button class="contactSubmit" type="submit">Submit</button>
         </form>
+        </section>
+        <section class="map-section" aria-labelledby="map-heading">
+            <h2 id="map-heading">Find Us</h2>
+            <p>123 Anime Street, Tokyo, Japan</p>
+            <iframe
+                title="ANIME-CAFE location map"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=139.6500%2C35.6500%2C139.7500%2C35.7000&layer=mapnik"
+                width="100%"
+                height="400"
+                style="border: 2px solid rgba(6, 209, 87, 0.35); border-radius: 8px; display: block; margin-top: 12px;"
+                loading="lazy"
+                referrerpolicy="no-referrer">
+            </iframe>
+        </section>
     </main>
     <script>
         function handleContactSubmit(event) {

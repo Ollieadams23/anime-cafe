@@ -1,0 +1,195 @@
+/* HOME PAGE (index.html) STYLES */
+
+.index-main {
+    display: flex;
+    flex-direction: row;
+}
+
+.firstcolumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.secondcolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 24px;
+    max-width: 800px;
+    flex: 2;
+}
+
+.thirdcolumn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Cards Section */
+#cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.card-link {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.card {
+    width: 240px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    border: 2px solid rgba(6, 209, 87, 0.35);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card-popup {
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #06d157;
+    font-size: 20px;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.card-link:hover .card-popup,
+.card-link:focus-visible .card-popup {
+    opacity: 1;
+    transform: translateX(0%) translateY(-50%);
+}
+
+.card-link:hover .card,
+.card-link:focus-visible .card {
+    transform: translateY(-30px) scale(1.02);
+    border-color: #06d157;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45);
+}
+
+.card-link:focus-visible {
+    outline: 3px solid #06d157;
+    outline-offset: 4px;
+}
+
+.card-link:active .card {
+    transform: translateY(-1px) scale(1.01);
+}
+
+/* USP Section */
+.usp-section {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.usp-section h2 {
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.usp-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.usp-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 12px;
+    padding: 16px;
+    color: #06d157;
+    text-align: left;
+}
+
+.usp-card h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.usp-card p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .usp-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .index-main {
+        flex-direction: column;
+    }
+
+    .firstcolumn,
+    .thirdcolumn {
+        display: none;
+    }
+
+    .secondcolumn {
+        flex: 1;
+    }
+}
+
+@media (max-width: 600px) {
+    .usp-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+
+/* Special Offers Section */
+.special {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.special img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex: 1;
+    min-width: 200px;
+}
+
+@media (max-width: 768px) {
+    .special {
+        flex-direction: column;
+    }
+
+    .special img {
+        min-width: 100%;
+        width: 100%;
+    }
+}
+
+h4 {
+    margin-top: 30px;
+    margin-bottom: 4px;
+}

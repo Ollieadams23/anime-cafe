@@ -1,4 +1,4 @@
-
+/* jshint esversion: 6 */
 
 function addToCart(itemId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];

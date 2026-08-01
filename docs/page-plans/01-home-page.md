@@ -62,3 +62,7 @@ Introduce the cafe, highlight unique selling points, and drive users to menu and
 - [x] 3 selling points visible
 - [x] Featured products shown
 - [x] Responsive layout on mobile and desktop
+- [ ] FB and insta links
+- [x] passes wc3 validation
+- [x] passes wc3 accessibility
+- [x] passes wc3 jigsaw css

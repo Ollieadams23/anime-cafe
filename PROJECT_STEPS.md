@@ -69,17 +69,17 @@ to create a functional, responsive website for a fictional local cafe to promote
 ### Phase 2: Setup
 - [x] Initialize project structure
 - [x] Install dependencies
-- [ ] Configure environment variables
+- [x] Configure environment variables
 - [x] Create base README and docs
 
 ### Phase 3: Development
-- [ ] Build core feature A
-- [ ] Build core feature B
-- [ ] Build UI/UX elements
-- [ ] Integrate APIs/services
-- [ ] Handle errors and edge cases
-- [ ] Build cart functionality (add/remove items, quantity)
-- [ ] Build checkout page and order summary
+- [x] Build core feature A
+- [x] Build core feature B
+- [x] Build UI/UX elements
+- [x] Integrate APIs/services
+- [x] Handle errors and edge cases
+- [x] Build cart functionality (add/remove items, quantity)
+- [x] Build checkout page and order summary
 
 ### Phase 4: Testing
 - [ ] Write unit tests
@@ -149,6 +149,29 @@ to create a functional, responsive website for a fictional local cafe to promote
 - **Root:** `colspan="2"` merges two cells into one, so `cells[2]` (3rd cell) becomes `cells[1]` (2nd cell)
 - **Solution:** Changed `totalsRow.cells[2].innerText` to `totalsRow.cells[1].innerText`
 - **Date Fixed:** 2026-07-31
+
+**Issue 13: Unused `removeFromCart()` function in products.js**
+- **Cause:** A `removeFromCart()` function was defined in `products.js` but never called — the products page only needs add-to-cart functionality, not removal
+- **Decision:** Chose not to use it on the products page; removal is handled on the checkout page via `checkout.js` instead
+- **Solution:** Left function unused / removed from products.js to keep the file clean
+- **File:** `scripts/products.js`
+- **Date Fixed:** 2026-08-01
+
+**Issue 14: `addToCart()` accidentally removed from products.js**
+- **Cause:** When removing the unused `removeFromCart()`, `addToCart()` was also removed, breaking the "Add to Cart" buttons on the products page (inline `onclick="addToCart()"` had no definition to call)
+- **Solution:** Re-added `addToCart()` to `products.js` — it must exist in both files since `checkout.js` is not loaded on the products page
+- **File:** `scripts/products.js`
+- **Date Fixed:** 2026-08-01
+
+**Issue 15: JSLint false positive — `addToCart` flagged as unused in products.js**
+- **Cause:** JSLint cannot analyse function calls inside template literal strings. The call `onclick="addToCart(${ItemId})"` is treated as plain text, so the linter does not recognise it as a JavaScript call
+- **Decision:** False positive — the function is genuinely used via an inline HTML event handler generated at runtime. Warning safely ignored
+- **File:** `scripts/products.js`, line 3
+- **Date Noted:** 2026-08-01
+- **Cause:** `loadSharedFooter()` had `const currentPage = window.location.pathname.split("/").pop() || "index.html";` copied from `loadSharedHeader()` but never used in the footer function
+- **Solution:** Commented out the unused variable to suppress the linter warning
+- **File:** `scripts/index.js`, `loadSharedFooter()` function
+- **Date Fixed:** 2026-08-01
 
 ### Phase 5: Deployment
 - [ ] Prepare production configuration

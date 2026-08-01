@@ -1,4 +1,4 @@
-
+/* jshint esversion: 6 */
 
 async function loadCheckout() {
     const checkoutMount = document.getElementById("checkout");

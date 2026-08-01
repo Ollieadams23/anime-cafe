@@ -58,3 +58,6 @@ Explain the cafe story, mission, and values so users trust the brand.
 - [x] Values section complete
 - [x] Team/founder content added
 - [x] Internal links tested
+- [x] passes wc3 validation
+- [x] passes wc3 accessibility
+- [x] passes wc3 jigsaw css
