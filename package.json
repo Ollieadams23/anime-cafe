@@ -1,0 +1,9 @@
+{
+  "name": "localcafe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A responsive multi-page website for a fictional local cafe to promote coffee, drinks, and snacks.",
+  "scripts": {
+    "test": "echo \"No tests configured\""
+  }
+}
