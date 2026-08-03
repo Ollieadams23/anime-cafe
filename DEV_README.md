@@ -133,26 +133,24 @@ console.log(items);  // Output: [1, 3, 5, 1]
 
 ---
 
-#### `displayCart()`
-Renders cart contents on the page. **Currently incomplete.**
+#### `showCartAmount()`
+Renders cart action buttons on the products page.
 
-**What it should do:**
-- Finds the cart display element (`productsCart` variable)
-- Gets cart items via `getCartItems()`
-- Maps each item ID to display format
-- Shows item details in a `<ul>` list
+**What it does:**
+- Finds the cart display element (`.products_cart`)
+- Reads cart length from `localStorage`
+- Renders a cart button with live count: `Cart (n)`
+- Renders an `Empty Cart` button that clears cart state and refreshes the cart display immediately
 
-**Current issues:**
-1. `productsCart` variable is undefined (not initialized)
-2. Only displays item IDs, not item names/prices/images
-3. Function is never called anywhere
-4. No quantity aggregation (if item added twice, shows duplicate lines)
+**Current behavior:**
+1. Cart count updates after every add
+2. Empty Cart works directly from the products page
+3. Cart state is synced using `localStorage`
 
-**What needs fixing:**
-```javascript
-// Need to define: const productsCart = document.querySelector('.products_cart');
-// Need to fetch full item data by ID from menu JSON files
-// Need to aggregate quantities for duplicate items
+**Example output:**
+```html
+<button class="productCartButton">Cart (3)</button>
+<button class="productCartButton">Empty Cart</button>
 ```
 
 ---
@@ -285,23 +283,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
 ## Common Issues & Fixes
 
-### Cart Not Displaying
-**Problem:** `displayCart()` doesn't render anything
-**Cause:** Function is never called + `productsCart` is undefined
+### Cart Controls Not Updating On Products Page
+**Problem:** Cart count/buttons can become stale after cart actions
+**Cause:** Cart UI was not being re-rendered after cart state changes
 
 **Fix:**
-```javascript
-// 1. Define the cart element
-const productsCart = document.querySelector('.products_cart');
+- Use `showCartAmount()` after every cart mutation
+- Keep products cart UI source-of-truth tied to `localStorage`
 
-// 2. Call displayCart on page load
-document.addEventListener("DOMContentLoaded", () => {
-    loadMenu('breakfasts');
-    loadMenu('drinks');
-    loadMenu('treats');
-    displayCart();  // Add this line
-});
-```
+### Cart Not Clearing After Checkout
+**Problem:** Users completed checkout but cart items remained
+**Cause:** Checkout flow did not reliably clear stored cart data before rerender
+
+**Fix:**
+- Added/updated `clearCart()` in checkout flow
+- Checkout button now clears cart data, then reloads checkout state to show empty cart
+
+### Checkout Loading Spinner Added
+**Update:** A loading spinner was added to the checkout page while checkout content is being prepared.
+
+**Implementation details:**
+- `scripts/checkout.js` injects a `#loader` block during checkout render
+- `assets/css/checkout.css` styles the loading text animation (blinking dots)
+- Loader is hidden in `loadCheckout()` after render work completes
+
+### Checkout Loader Not Disappearing (Fixed)
+**Problem:** Loader stayed visible after checkout content loaded.
+
+**Cause:** Loader hide logic was attached to `window.load`, which only fires once. Later cart updates re-rendered checkout and created a new loader that was never hidden.
+
+**Fix:** Moved loader hide logic inside `loadCheckout()` and applied it in a `finally` block so the loader is always hidden after each render cycle.
 
 ### Images Not Enlarging
 **Problem:** Clicking product images does nothing

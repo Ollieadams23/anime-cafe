@@ -1,5 +1,13 @@
 /* jshint esversion: 6 */
 
+
+
+function clearCart(){
+    localStorage.clear('cart');
+    //refresh page
+    loadCheckout();
+}
+
 async function loadCheckout() {
     const checkoutMount = document.getElementById("checkout");
 
@@ -9,6 +17,10 @@ async function loadCheckout() {
 
     checkoutMount.innerHTML = `
         <h2>Checkout</h2>
+        <div id="loader">
+            <div class="spinner"></div>
+            <p>Loading<span>.</span><span>.</span><span>.</span></p>
+            </div>
         <table id='checkout-table' aria-label="Checkout table with items, quantities, and prices">
         <thead>
             <tr>
@@ -27,6 +39,10 @@ async function loadCheckout() {
 
         </table>
     `;
+
+    const loader = document.getElementById('loader');
+
+    try {
 
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -119,10 +135,18 @@ async function loadCheckout() {
     paymentRow.innerHTML = `
     <td></td>
     <td></td>
-    <td><button class="checkout-button" onclick="alert('Checkout Complete')" style="font-size:1em">Checkout</button></td>
+    <td><button class="checkout-button" onclick="clearCart();alert('Checkout Complete')" style="font-size:1em">Checkout</button></td>
 
     `;
     totals.appendChild(paymentRow);//append row to tfoot
+
+    } catch (error) {
+        console.error('Checkout load failed:', error);
+    } finally {
+        if (loader) {
+            loader.style.display = 'none';
+        }
+    }
 
 
     }
@@ -146,6 +170,10 @@ function addToCart(itemId){
     console.log(itemId);
     loadCheckout();
 }
+
+
+
+
 
 
 loadCheckout();

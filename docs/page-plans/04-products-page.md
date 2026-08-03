@@ -59,6 +59,7 @@ Each card includes:
 - [x] Every product has image, description, and price
 - [x] Category grouping is clear
 - [ ] Optional filtering works correctly
+- [x] Cart controls show live count and include Empty Cart action
 - [x] Text remains readable on all backgrounds
 - [x] passes wc3 validation
 - [x] failed wc3 accessibility but the headings are inserted with JS

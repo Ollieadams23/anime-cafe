@@ -2,6 +2,10 @@
 
 A responsive multi-page website for a fictional local cafe to promote coffee, drinks, and snacks.
 
+## Recent Updates
+- Added a loading spinner on the checkout page to provide feedback while checkout content loads.
+- Fixed checkout loader lifecycle bug so the spinner now disappears correctly after checkout render completes.
+
 ## Tech Stack and Tooling
 
 ### Core Stack

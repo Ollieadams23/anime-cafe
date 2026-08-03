@@ -173,6 +173,30 @@ to create a functional, responsive website for a fictional local cafe to promote
 - **File:** `scripts/index.js`, `loadSharedFooter()` function
 - **Date Fixed:** 2026-08-01
 
+**Issue 16: Added Empty Cart control on products page**
+- **Cause:** Users needed a quick way to clear cart without leaving the products page
+- **Solution:** Updated `showCartAmount()` in `products.js` to render an `Empty Cart` button alongside `Cart (n)`, and refresh cart UI immediately after clearing
+- **File:** `scripts/products.js`
+- **Date Fixed:** 2026-08-03
+
+**Issue 17: Cart not emptying after successful checkout**
+- **Cause:** Checkout completion flow did not consistently clear cart state before refresh
+- **Solution:** Updated checkout completion to call `clearCart()` and then reload checkout state so the empty-cart message is shown after payment
+- **File:** `scripts/checkout.js`
+- **Date Fixed:** 2026-08-03
+
+**Issue 18: Added loading spinner to checkout page**
+- **Cause:** Checkout page needed clear visual feedback while cart/menu data loads
+- **Solution:** Added `#loader` markup in `loadCheckout()` and loading animation styles in `checkout.css`; spinner now displays during load state
+- **Files:** `scripts/checkout.js`, `assets/css/checkout.css`
+- **Date Fixed:** 2026-08-03
+
+**Issue 19: Loader did not disappear after checkout loaded**
+- **Cause:** Loader hide logic was bound to `window.load` (fires once), but checkout re-renders recreate `#loader` on later updates
+- **Solution:** Moved hide logic into `loadCheckout()` and hide loader in a `finally` block so it is hidden on every render path (success, empty cart, and error)
+- **File:** `scripts/checkout.js`
+- **Date Fixed:** 2026-08-03
+
 ### Phase 5: Deployment
 - [ ] Prepare production configuration
 - [ ] Deploy to target environment

@@ -31,3 +31,4 @@
 - **File:** `scripts/checkout.js`
 - **Issue:** If cart is empty, nothing renders — no feedback for screen readers or sighted users
 - **Fix:** After loading cart from localStorage, check if empty and display a message with a link back to products.html
+- **Status:** Resolved (implemented)

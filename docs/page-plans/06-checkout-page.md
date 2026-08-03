@@ -43,6 +43,10 @@ Display cart items with quantities, prices, and order summary. Allow users to re
 6. Order notes (optional)
 - Text field for special requests or delivery instructions
 
+7. Loading state
+- Show a loading spinner/indicator while checkout data is being prepared
+- Hide spinner once cart table content is ready
+
 ## Links on this page
 - index.html
 - products.html
@@ -51,6 +55,7 @@ Display cart items with quantities, prices, and order summary. Allow users to re
 
 ## JavaScript requirements
 - Load cart from localStorage
+- Show loading spinner while fetching and preparing checkout data
 - Fetch item details (name, price, image) from JSON files using item IDs
 - Calculate quantities (count duplicate IDs)
 - Calculate totals and subtotals
@@ -77,6 +82,7 @@ localStorage.cart = "[1, 3, 5, 1]"  // IDs only
 - Remove button per item
 - Quantity updates recalculate totals in real-time
 - Clear cart with confirmation modal
+- Loading indicator appears while checkout content is loading
 - Continue shopping returns to products page
 
 ## Styling notes
@@ -111,6 +117,8 @@ localStorage.cart = "[1, 3, 5, 1]"  // IDs only
 ## Build checklist
 - [x] Cart loads from localStorage on page load
 - [x] Empty cart message shows when cart is empty
+- [x] Loading spinner shows during checkout load state
+- [x] Loading spinner hides after checkout content finishes rendering
 - [x] All items display with image, name, price, quantity
 - [x] Quantities correctly aggregated from cart IDs
 - [x] +/- buttons update quantity and recalculate totals
@@ -118,6 +126,7 @@ localStorage.cart = "[1, 3, 5, 1]"  // IDs only
 - [x] Totals calculated correctly
 - [ ] Continue Shopping link works
 - [ ] Clear Cart button with confirmation
+- [x] Checkout action clears cart and shows empty cart state after payment
 - [x] All links work (header navigation, back to products)
 - [x] Images clickable to enlarge
 - [x] Responsive on mobile and desktop
