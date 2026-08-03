@@ -19,7 +19,7 @@ function showCartAmount() {
     const cartamount = getCartItems().length;
     productsCart.innerHTML = `
     <button class='productCartButton' onclick="window.location.href = window.location.origin + '/checkout.html';">Cart (${cartamount})</button>
-
+    <button class='productCartButton' onclick="localStorage.clear('cart'); showCartAmount();">Empty Cart</button>
     `;
 }
 

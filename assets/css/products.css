@@ -45,6 +45,7 @@ h1{
     text-align: left;
     font-size: 2cm;
     width: 100%;
+    margin: 0 0 12px;
 }
 
 .products_title {
@@ -133,6 +134,14 @@ h1{
 @media (max-width: 900px) {
     .products {
         flex-direction: column;
+    }
+
+    .products #breakfasts,
+    .products #drinks,
+    .products #treats {
+        flex: 0 0 auto;
+        width: 100%;
+        min-width: 0;
     }
 
     .products_cart {
